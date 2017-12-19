@@ -1,4 +1,3 @@
-sudo: required
 services:
   - docker
 env:
@@ -8,7 +7,7 @@ env:
 
 script:
   - travis_retry docker build -t ${REPO} .
-  - docker run -it ${REPO}
+  - docker run -itd ${REPO}
 
 after_success:
   - docker images
