@@ -1,5 +1,7 @@
 # Puppet Master in Docker
 
+![Build Status](https://travis-ci.org/shazi7804/puppet-master-docker.svg?branch=master)
+
 The example is puppet master in docker 
 
 ## HowTo
