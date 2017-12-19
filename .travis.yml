@@ -1,0 +1,21 @@
+sudo: required
+services:
+  - docker
+env:
+  global:
+    - REPO: shazi7804/puppet-master
+  matrix:
+
+script:
+  - travis_retry docker build -t ${REPO} .
+  - docker run -it ${REPO}
+
+after_success:
+  - docker images
+  - 'if [ "$TRAVIS_BRANCH" == "master" ]; then
+      docker login -u $DOCKER_USER -p $DOCKER_PASS;
+      docker push ${REPO};
+    fi'
+
+notifications:
+  email: false
