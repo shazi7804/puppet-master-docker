@@ -16,7 +16,14 @@ $ docker build -t="shazi7804/puppet:master" .
 - run docker for puppet master
 
 ```
-$ docker run -itd -P --name puppet-master -v $(pwd)/manifests:/etc/puppetlabs/code/environments/production/manifests shazi7804/puppet:master
+$ docker run -itd -P --name puppet-master -v $(pwd):/etc/puppetlabs/code/environments/production shazi7804/puppet:master
+```
+
+- verify puppetserver running
+
+```
+$ docker exec -it puppet-master netstat -tunlp
+tcp 0 0 0.0.0.0:8140  0.0.0.0:* LISTEN -
 ```
 
 ---
@@ -26,4 +33,3 @@ $ docker run -itd -P --name puppet-master -v $(pwd)/manifests:/etc/puppetlabs/co
 ```
 $ docker exec -it puppet-master puppet agent -t
 ```
-
