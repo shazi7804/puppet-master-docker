@@ -24,6 +24,19 @@ tcp 0 0 0.0.0.0:8140  0.0.0.0:* LISTEN -
 
 ---
 
+### Example code
+
+- install apache2
+
+```
+# site.pp
+node default {
+  package { 'apache2':
+    ensure => present,
+  }
+}
+```
+
 ### Apply puppet agent
 
 ```
