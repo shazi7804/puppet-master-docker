@@ -48,7 +48,7 @@ node default {
 $ make deploy
 or
 $ docker exec -it puppet-master puppet agent -t
-
+```
 
 ## How to get image
 
