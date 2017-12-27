@@ -1,6 +1,6 @@
 # Puppet in Docker
 
-![Build Status](https://travis-ci.org/shazi7804/puppet-master-docker.svg?branch=master)
+[![Build Status](https://travis-ci.org/shazi7804/puppet-master-docker.svg?branch=master)](https://travis-ci.org/shazi7804/puppet-master-docker)
 
 The example is puppet server and agent both in docker
 
