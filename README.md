@@ -48,4 +48,10 @@ node default {
 $ make deploy
 or
 $ docker exec -it puppet-master puppet agent -t
+
+
+## How to get image
+
 ```
+$ docker pull shazi7804/puppet-master
+``````
