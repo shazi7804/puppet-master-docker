@@ -2,7 +2,11 @@
 
 ![Build Status](https://travis-ci.org/shazi7804/puppet-master-docker.svg?branch=master)
 
-The example is puppet master in docker 
+The example is puppet server and agent both in docker
+
+## Architecture
+
+![architecture](images/puppet-in-docker.png)
 
 ## HowTo
 
