@@ -24,4 +24,12 @@ node default {
     mode    => '0400',
     content => '<?php phpinfo(); ?>',
   }
+
+    file_line { 'set-timezone':
+    ensure => present,
+    path   => '/etc/php/7.0/apache2/php.ini',
+    line   => 'date.timezone = "Asia/Taipei"',
+    match  => ';date.timezone = ',
+    notify => Service['apache2'],
+  }
 }

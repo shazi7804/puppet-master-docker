@@ -18,8 +18,9 @@ $ make install
 - verify puppetserver running
 
 ```
+$ make status
+or
 $ docker exec -it puppet-master netstat -tunlp
-tcp 0 0 0.0.0.0:8140  0.0.0.0:* LISTEN -
 ```
 
 ---
@@ -40,7 +41,7 @@ node default {
 ### Apply puppet agent
 
 ```
-$ make build
+$ make deploy
 or
 $ docker exec -it puppet-master puppet agent -t
 ```

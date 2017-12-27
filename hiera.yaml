@@ -1,0 +1,22 @@
+---
+version: 5
+
+defaults:
+  datadir: data
+  data_hash: yaml_data
+
+hierarchy:
+  - name: "Per-node data"
+    glob: "nodes/**/%{::trusted.certname}.yaml"
+
+  - name: "Per-environment data"
+    path: "environment/%{::environment}.yaml"
+
+  - name: "Per-OS defaults"
+    path: "os/%{facts.os.family}.yaml"
+
+  - name: "Per-Virtual data"
+    path: "virtual/%{::is_virtual}.yaml"
+
+  - name: "Common data"
+    path: "common.yaml"
