@@ -5,7 +5,6 @@ Gemfile.local
 vendor/
 spec/fixtures/manifests/
 spec/fixtures/modules/
-modules
 log/
 junit/
 .vagrant/
